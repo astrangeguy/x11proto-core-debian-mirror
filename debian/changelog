@@ -1,4 +1,4 @@
-x11proto-core (7.0.4-1) UNRELEASED; urgency=low
+x11proto-core (7.0.4-1) experimental; urgency=low
 
   * First upload to Debian
 
