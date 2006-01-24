@@ -2,7 +2,7 @@ x11proto-core (7.0.4-1) experimental; urgency=low
 
   * First upload to Debian
 
- -- David Nusinow <dnusinow@debian.org>  Fri, 30 Dec 2005 14:37:03 -0500
+ -- David Nusinow <dnusinow@debian.org>  Mon, 23 Jan 2006 22:07:47 -0500
 
 x11proto-core (6.8.99.15+cvs.20050722-1) breezy; urgency=low
 
