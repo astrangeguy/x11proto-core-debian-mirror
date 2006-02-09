@@ -11,7 +11,7 @@ Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, x11-common
 Conflicts: x-dev (<< 6.8.99.7-1)
 Replaces: x-dev (<< 6.8.99.7-1)
-Pre-Depends: x11-common (>= 0.99)
+Pre-Depends: x11-common (>= 1:1.0)
 Description: X11 core wire protocol and auxiliary headers
  This package provides the wire protocol for the core X11 protocol, and also
  provides a number of utility headers, used to abstract OS-specific functions.
