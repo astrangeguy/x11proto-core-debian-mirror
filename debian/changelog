@@ -1,3 +1,9 @@
+x11proto-core (7.0.4-3) unstable; urgency=low
+
+  * Upload to unstable
+
+ -- David Nusinow <dnusinow@debian.org>  Thu, 23 Mar 2006 21:36:37 -0500
+
 x11proto-core (7.0.4-2) experimental; urgency=low
 
   * Add epoch to versioned Pre-Depends on x11-common to make upgrades
