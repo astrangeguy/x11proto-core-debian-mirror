@@ -1,0 +1,64 @@
+x11proto-core (7.0.7-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- David Nusinow <dnusinow@debian.org>  Sat,  1 Jul 2006 20:21:52 -0400
+
+x11proto-core (7.0.4-3) unstable; urgency=low
+
+  * Upload to unstable
+
+ -- David Nusinow <dnusinow@debian.org>  Thu, 23 Mar 2006 21:36:37 -0500
+
+x11proto-core (7.0.4-2) experimental; urgency=low
+
+  * Add epoch to versioned Pre-Depends on x11-common to make upgrades
+    from monolithic x11-common work (Closes: #351779).
+
+ -- Michel Dänzer <daenzer@debian.org>  Thu,  9 Feb 2006 16:41:11 +0100
+
+x11proto-core (7.0.4-1) experimental; urgency=low
+
+  * First upload to Debian
+
+ -- David Nusinow <dnusinow@debian.org>  Mon, 23 Jan 2006 22:07:47 -0500
+
+x11proto-core (6.8.99.15+cvs.20050722-1) breezy; urgency=low
+
+  * Update to today's CVS, which no longer needs _XOPEN_SOURCE exposed to
+    build Xpoll.h.
+
+ -- Daniel Stone <daniel.stone@ubuntu.com>  Fri, 22 Jul 2005 18:25:10 +1000
+
+x11proto-core (6.8.99.15-1) breezy; urgency=low
+
+  * Update to today's CVS, which adds x11incdir to xproto.pc.in for imake.
+
+ -- Daniel Stone <daniel.stone@ubuntu.com>  Wed, 20 Jul 2005 12:39:00 +1000
+
+x11proto-core (6.8.99.8-2) breezy; urgency=low
+
+  * Remove 008_fix_xgetpw_macro.  We'll catch this one via upstream when a
+    proper solution -- as this one is broken in various ways also -- lands.
+
+ -- Daniel Stone <daniel.stone@ubuntu.com>  Mon, 11 Jul 2005 09:45:29 +1000
+
+x11proto-core (6.8.99.8-1) breezy; urgency=low
+
+  * Update to new CVS version, including _X_SENTINEL.
+  * Fix comment in debian/rules.
+
+ -- Daniel Stone <daniel.stone@ubuntu.com>  Thu,  9 Jun 2005 17:23:10 +1000
+
+x11proto-core (6.8.99.7-2) breezy; urgency=low
+
+  * Add 009_x_sentinel_macro.dpatch to bring us the new _X_SENTINAL
+    macro that libx11 wants to see in Xfuncproto.h.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Thu, 16 Jun 2005 13:46:36 +0000
+
+x11proto-core (6.8.99.7-1) breezy; urgency=low
+
+  * First x11proto-core release.
+
+ -- Daniel Stone <daniel.stone@ubuntu.com>  Wed, 6 Apr 2005 23:58:26 +1000
