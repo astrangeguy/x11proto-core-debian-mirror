@@ -1,3 +1,27 @@
+x11proto-core (7.0.7-2) unstable; urgency=low
+
+  [ Andres Salomon ]
+  * Test for obj-$(DEB_BUILD_GNU_TYPE) before creating it during build;
+    idempotency fix.
+
+  [ David Nusinow ]
+  * Upload to unstable
+
+ -- David Nusinow <dnusinow@debian.org>  Mon, 21 Aug 2006 21:33:18 +0000
+
+x11proto-core (7.0.7-1) experimental; urgency=low
+
+  * New upstream release
+  * Move debhelper from build-depends-indep to build-depends because we use
+    dh_clean in the clean target
+  * Bump debhelper compat to 5
+  * Remove extra x11-common dependency
+  * Version x11-common pre-dependency to 1:7.0.0 to match the rest of Debian
+    and shut lintian up
+  * Run dh_install with --list-missing
+
+ -- David Nusinow <dnusinow@debian.org>  Sat,  1 Jul 2006 22:27:12 -0400
+
 x11proto-core (7.0.4-3) unstable; urgency=low
 
   * Upload to unstable
