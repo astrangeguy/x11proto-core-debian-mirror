@@ -42,7 +42,7 @@ DIST_COMMON = $(am__configure_deps) $(srcdir)/Makefile.am \
 	$(srcdir)/Xpoll.h.in $(srcdir)/do-not-use-config.h.in \
 	$(srcdir)/xproto.pc.in $(top_srcdir)/configure \
 	$(xproto_HEADERS) AUTHORS COPYING ChangeLog config.guess \
-	config.sub install-sh missing
+	config.sub install-sh missing mkinstalldirs
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.ac
@@ -50,7 +50,7 @@ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
  configure.lineno configure.status.lineno
-mkinstalldirs = $(install_sh) -d
+mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
 CONFIG_HEADER = do-not-use-config.h Xfuncproto.h
 CONFIG_CLEAN_FILES = Xpoll.h xproto.pc
 SOURCES =
@@ -61,11 +61,13 @@ am__vpath_adj = case $$p in \
     *) f=$$p;; \
   esac;
 am__strip_dir = `echo $$p | sed -e 's|^.*/||'`;
-am__installdirs = "$(DESTDIR)$(pkgconfigdir)" "$(DESTDIR)$(xprotodir)"
+am__installdirs = "$(DESTDIR)$(pkgconfigdir)" "$(DESTDIR)$(xprotodir)" \
+	"$(DESTDIR)$(xprotodir)"
 pkgconfigDATA_INSTALL = $(INSTALL_DATA)
 DATA = $(pkgconfig_DATA)
+nodist_xprotoHEADERS_INSTALL = $(INSTALL_HEADER)
 xprotoHEADERS_INSTALL = $(INSTALL_HEADER)
-HEADERS = $(xproto_HEADERS)
+HEADERS = $(nodist_xproto_HEADERS) $(xproto_HEADERS)
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -121,7 +123,6 @@ STRIP = @STRIP@
 USE_FDS_BITS = @USE_FDS_BITS@
 VERSION = @VERSION@
 ac_ct_CC = @ac_ct_CC@
-ac_ct_STRIP = @ac_ct_STRIP@
 am__fastdepCC_FALSE = @am__fastdepCC_FALSE@
 am__fastdepCC_TRUE = @am__fastdepCC_TRUE@
 am__include = @am__include@
@@ -136,23 +137,30 @@ build_cpu = @build_cpu@
 build_os = @build_os@
 build_vendor = @build_vendor@
 datadir = @datadir@
+datarootdir = @datarootdir@
+docdir = @docdir@
+dvidir = @dvidir@
 exec_prefix = @exec_prefix@
 host = @host@
 host_alias = @host_alias@
 host_cpu = @host_cpu@
 host_os = @host_os@
 host_vendor = @host_vendor@
+htmldir = @htmldir@
 includedir = @includedir@
 infodir = @infodir@
 install_sh = @install_sh@
 libdir = @libdir@
 libexecdir = @libexecdir@
+localedir = @localedir@
 localstatedir = @localstatedir@
 mandir = @mandir@
 mkdir_p = @mkdir_p@
 oldincludedir = @oldincludedir@
+pdfdir = @pdfdir@
 prefix = @prefix@
 program_transform_name = @program_transform_name@
+psdir = @psdir@
 sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 sysconfdir = @sysconfdir@
@@ -170,14 +178,12 @@ xproto_HEADERS = \
 	Xatom.h \
 	Xdefs.h \
 	XF86keysym.h \
-	Xfuncproto.h \
 	Xfuncs.h \
 	X.h \
 	Xmd.h \
 	Xosdefs.h \
 	Xos.h \
 	Xos_r.h \
-	Xpoll.h \
 	Xproto.h \
 	Xprotostr.h \
 	Xthreads.h \
@@ -186,9 +192,14 @@ xproto_HEADERS = \
 	Xwindows.h \
 	Xwinsock.h
 
+nodist_xproto_HEADERS = \
+	Xfuncproto.h \
+	Xpoll.h
+
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = xproto.pc
-EXTRA_DIST = autogen.sh xproto.pc.in
+EXTRA_DIST = autogen.sh xproto.pc.in ChangeLog
+CLEANFILES = ChangeLog
 all: do-not-use-config.h Xfuncproto.h
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
@@ -274,6 +285,23 @@ uninstall-pkgconfigDATA:
 	  f=$(am__strip_dir) \
 	  echo " rm -f '$(DESTDIR)$(pkgconfigdir)/$$f'"; \
 	  rm -f "$(DESTDIR)$(pkgconfigdir)/$$f"; \
+	done
+install-nodist_xprotoHEADERS: $(nodist_xproto_HEADERS)
+	@$(NORMAL_INSTALL)
+	test -z "$(xprotodir)" || $(mkdir_p) "$(DESTDIR)$(xprotodir)"
+	@list='$(nodist_xproto_HEADERS)'; for p in $$list; do \
+	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+	  f=$(am__strip_dir) \
+	  echo " $(nodist_xprotoHEADERS_INSTALL) '$$d$$p' '$(DESTDIR)$(xprotodir)/$$f'"; \
+	  $(nodist_xprotoHEADERS_INSTALL) "$$d$$p" "$(DESTDIR)$(xprotodir)/$$f"; \
+	done
+
+uninstall-nodist_xprotoHEADERS:
+	@$(NORMAL_UNINSTALL)
+	@list='$(nodist_xproto_HEADERS)'; for p in $$list; do \
+	  f=$(am__strip_dir) \
+	  echo " rm -f '$(DESTDIR)$(xprotodir)/$$f'"; \
+	  rm -f "$(DESTDIR)$(xprotodir)/$$f"; \
 	done
 install-xprotoHEADERS: $(xproto_HEADERS)
 	@$(NORMAL_INSTALL)
@@ -371,6 +399,9 @@ distdir: $(DISTFILES)
 	    || exit 1; \
 	  fi; \
 	done
+	$(MAKE) $(AM_MAKEFLAGS) \
+	  top_distdir="$(top_distdir)" distdir="$(distdir)" \
+	  dist-hook
 	-find $(distdir) -type d ! -perm -777 -exec chmod a+rwx {} \; -o \
 	  ! -type d ! -perm -444 -links 1 -exec chmod a+r {} \; -o \
 	  ! -type d ! -perm -400 -exec chmod a+r {} \; -o \
@@ -472,7 +503,7 @@ check-am: all-am
 check: check-am
 all-am: Makefile $(DATA) $(HEADERS) do-not-use-config.h Xfuncproto.h
 installdirs:
-	for dir in "$(DESTDIR)$(pkgconfigdir)" "$(DESTDIR)$(xprotodir)"; do \
+	for dir in "$(DESTDIR)$(pkgconfigdir)" "$(DESTDIR)$(xprotodir)" "$(DESTDIR)$(xprotodir)"; do \
 	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
 	done
 install: install-am
@@ -492,6 +523,7 @@ install-strip:
 mostlyclean-generic:
 
 clean-generic:
+	-test -z "$(CLEANFILES)" || rm -f $(CLEANFILES)
 
 distclean-generic:
 	-test -z "$(CONFIG_CLEAN_FILES)" || rm -f $(CONFIG_CLEAN_FILES)
@@ -518,7 +550,8 @@ info: info-am
 
 info-am:
 
-install-data-am: install-pkgconfigDATA install-xprotoHEADERS
+install-data-am: install-nodist_xprotoHEADERS install-pkgconfigDATA \
+	install-xprotoHEADERS
 
 install-exec-am:
 
@@ -546,23 +579,31 @@ ps: ps-am
 
 ps-am:
 
-uninstall-am: uninstall-info-am uninstall-pkgconfigDATA \
-	uninstall-xprotoHEADERS
+uninstall-am: uninstall-info-am uninstall-nodist_xprotoHEADERS \
+	uninstall-pkgconfigDATA uninstall-xprotoHEADERS
 
 .PHONY: CTAGS GTAGS all all-am am--refresh check check-am clean \
 	clean-generic ctags dist dist-all dist-bzip2 dist-gzip \
-	dist-shar dist-tarZ dist-zip distcheck distclean \
+	dist-hook dist-shar dist-tarZ dist-zip distcheck distclean \
 	distclean-generic distclean-hdr distclean-tags distcleancheck \
 	distdir distuninstallcheck dvi dvi-am html html-am info \
 	info-am install install-am install-data install-data-am \
 	install-exec install-exec-am install-info install-info-am \
-	install-man install-pkgconfigDATA install-strip \
-	install-xprotoHEADERS installcheck installcheck-am installdirs \
-	maintainer-clean maintainer-clean-generic mostlyclean \
-	mostlyclean-generic pdf pdf-am ps ps-am tags uninstall \
-	uninstall-am uninstall-info-am uninstall-pkgconfigDATA \
+	install-man install-nodist_xprotoHEADERS install-pkgconfigDATA \
+	install-strip install-xprotoHEADERS installcheck \
+	installcheck-am installdirs maintainer-clean \
+	maintainer-clean-generic mostlyclean mostlyclean-generic pdf \
+	pdf-am ps ps-am tags uninstall uninstall-am uninstall-info-am \
+	uninstall-nodist_xprotoHEADERS uninstall-pkgconfigDATA \
 	uninstall-xprotoHEADERS
 
+
+.PHONY: ChangeLog
+
+ChangeLog:
+	(GIT_DIR=$(top_srcdir)/.git git-log > .changelog.tmp && mv .changelog.tmp ChangeLog; rm -f .changelog.tmp) || (touch ChangeLog; echo 'git directory not found: installing possibly empty changelog.' >&2)
+
+dist-hook: ChangeLog
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:
