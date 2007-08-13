@@ -2,9 +2,11 @@ Source: x11proto-core
 Section: x11
 Priority: optional
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
-Uploaders: David Nusinow <dnusinow@debian.org>, Branden Robinson <branden@debian.org>, Fabio M. Di Nitto <fabbione@fabbione.net>
+Uploaders: David Nusinow <dnusinow@debian.org>, Branden Robinson <branden@debian.org>
 Build-Depends: debhelper (>= 5.0.0)
 Standards-Version: 3.7.2
+XS-Vcs-Git: git://git.debian.org/git/pkg-xorg/proto/x11proto-core
+XS-Vcs-Browser: http://git.debian.org/?p=pkg-xorg/proto/x11proto-core.git
 
 Package: x11proto-core-dev
 Architecture: all
@@ -13,18 +15,19 @@ Conflicts: x-dev (<< 6.8.99.7-1)
 Replaces: x-dev (<< 6.8.99.7-1)
 Pre-Depends: x11-common (>= 1:7.0.0)
 Description: X11 core wire protocol and auxiliary headers
- This package provides the wire protocol for the core X11 protocol, and also
- provides a number of utility headers, used to abstract OS-specific functions.
+ This package provides development headers describing the wire protocol
+ for the core X11 protocol, and also provides a number of utility headers,
+ used to abstract OS-specific functions.
  .
  This package deprecates 'x-dev', a package from the monolithic builds of
  XFree86 and X.Org.
  .
  More information about X.Org can be found at:
+ <URL:http://www.X.org>
  <URL:http://xorg.freedesktop.org>
  <URL:http://lists.freedesktop.org/mailman/listinfo/xorg>
  .
- This module can be found as the module 'proto/X11' at
- :pserver:anoncvs@cvs.freedesktop.org:/cvs/xorg
+ This package is built from the X.org xproto proto module.
 
 Package: x-dev
 Architecture: all
