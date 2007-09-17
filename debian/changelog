@@ -1,4 +1,4 @@
-x11proto-core (7.0.11-1) UNRELEASED; urgency=low
+x11proto-core (7.0.11-1) unstable; urgency=low
 
   [ Brice Goglin ]
   * Update the long description.
@@ -10,7 +10,7 @@ x11proto-core (7.0.11-1) UNRELEASED; urgency=low
   * New upstream release.
   * Add myself to Uploaders, and remove Branden with his permission.
 
- -- Julien Cristau <jcristau@debian.org>  Mon, 17 Sep 2007 23:59:11 +0200
+ -- Julien Cristau <jcristau@debian.org>  Tue, 18 Sep 2007 00:02:16 +0200
 
 x11proto-core (7.0.10-2) unstable; urgency=low
 
