@@ -1,11 +1,15 @@
-x11proto-core (7.0.10-3) UNRELEASED; urgency=low
+x11proto-core (7.0.11-1) UNRELEASED; urgency=low
 
+  [ Brice Goglin ]
   * Update the long description.
   * Add URL in debian/copyright.
   * Add XS-Vcs-* to debian/control.
   * Remove Fabio from Uploaders, with his permission.
 
- -- Brice Goglin <bgoglin@debian.org>  Tue, 14 Aug 2007 00:06:10 +0200
+  [ Julien Cristau ]
+  * New upstream release.
+
+ -- Julien Cristau <jcristau@debian.org>  Mon, 17 Sep 2007 23:57:59 +0200
 
 x11proto-core (7.0.10-2) unstable; urgency=low
 
