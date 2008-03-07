@@ -1,3 +1,53 @@
+commit d34310efef11264ddff79320b8c6f03705b1208a
+Author: Adam Jackson <ajax@redhat.com>
+Date:   Wed Mar 5 22:09:16 2008 -0500
+
+    x11proto 7.0.12
+
+commit e4ad7a8080e4ac0b868fa7cf39bc5ad9a6e0bee1
+Author: Jeremy Huddleston <jeremy@tifa.local>
+Date:   Sun Feb 10 19:07:49 2008 -0800
+
+    Fixed #ifdef checks that were using i386 to use __i386__
+    
+    """
+    It's simply obsolete, sloppy, compiler namespace pollution.  The
+    compiler is not allowed to predefine symbols that might conflict with
+    ordinary identifiers.  For backwards compatibility gcc currently
+    predefines i386 when compiling for x86 32-bit (but not 64-bit), but that
+    will go away.  It is also not defined if you specify -ansi when invoking
+    the compiler, because then it is seriously standards compliant.  Other
+    compilers shouldn't define it either.  Correct code shouldn't rely on it
+    being defined.  However __i386__ is safe and proper.
+    """
+
+commit e49280c1c33622dbf288b0ac4f8324b01ff9b4aa
+Author: Jeremy Huddleston <jeremy@yuffie.local>
+Date:   Mon Dec 10 21:33:01 2007 -0800
+
+    Changed __DARWIN__ to __APPLE__
+
+commit 5ae4d304ecb5fb4af0435c9f2efde3d2da5905d1
+Author: Alan Coopersmith <alan.coopersmith@sun.com>
+Date:   Tue Oct 30 18:44:49 2007 -0700
+
+    Make Xalloca.h work with Sun C++ compiler
+
+commit 5ccc71161283fdb2c42da1eeb4049650f6a2f429
+Author: Ben Byer <bbyer@bbyer.apple.com>
+Date:   Tue Oct 30 18:40:47 2007 -0700
+
+    fd_mask needs to be defined on OS X, too
+
+commit 8be48ca399c3efd0e5d59f53da1b37d02647f33b
+Author: Daniel Stone <daniel@fooishbar.org>
+Date:   Mon Sep 24 12:28:25 2007 +0300
+
+    Check headers before testing for fds_bits access method (bug #8442)
+    
+    HP-UX doesn't have sys/select.h, so make sure we don't overzealously include
+    headers when we try to find out how to use fds_bits.
+
 commit 68e841fb4bf489531635e6bee70f041d2c3cb87c
 Author: James Cloos <cloos@jhcloos.com>
 Date:   Sat Sep 8 08:30:17 2007 -0400
