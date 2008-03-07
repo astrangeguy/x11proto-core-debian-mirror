@@ -30,6 +30,7 @@ Description: X11 core wire protocol and auxiliary headers
  This package is built from the X.org xproto proto module.
 
 Package: x-dev
+Section: libdevel
 Architecture: all
 Depends: x11proto-core-dev
 Description: dummy package for transition purposes
