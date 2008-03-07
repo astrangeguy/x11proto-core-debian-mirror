@@ -1,11 +1,11 @@
-x11proto-core (7.0.12-1) UNRELEASED; urgency=low
+x11proto-core (7.0.12-1) unstable; urgency=low
 
   * New upstream release.
   * debian/control updates:
     + bump Standards-Version to 3.7.3 (no changes)
     + drop the XS- prefix from the Vcs fields
 
- -- Julien Cristau <jcristau@debian.org>  Fri, 07 Mar 2008 13:20:52 +0100
+ -- Julien Cristau <jcristau@debian.org>  Fri, 07 Mar 2008 13:55:18 +0100
 
 x11proto-core (7.0.11-1) unstable; urgency=low
 
