@@ -1,3 +1,153 @@
+commit 33a7de5cdacb59503b26c6523ffb33dba118faed
+Author: Peter Hutterer <peter.hutterer@redhat.com>
+Date:   Thu Oct 23 22:41:01 2008 +1030
+
+    Bump to 7.0.14.
+
+commit 1cf41088ff751e60071a519466b5a51b65c7626a
+Author: Bastien Nocera <bnocera@redhat.com>
+Date:   Wed Oct 15 14:20:45 2008 +1030
+
+    Keysyms needed for some HID remote controls to work under X. #16519
+    
+    In particular, this enables Sony Ericsson phones and PS3 BD remotes.
+    
+    X.Org Bug 16519 <https://bugs.freedesktop.org/show_bug.cgi?id=16519>
+    
+    Signed-off-by: Peter Hutterer <peter.hutterer@redhat.com>
+
+commit 0b541b3fa282531c97c6ecee574c8b92b1489bfc
+Author: Peter Hutterer <peter.hutterer@redhat.com>
+Date:   Tue Oct 14 21:56:14 2008 +1030
+
+    Fix typos in comments (UP/DOWN TACK and LEFT/RIGHT TACK wrong way round).
+    
+    Spotted by Erik Streb and Julien Cristau.
+    
+    Signed-off-by: Peter Hutterer <peter.hutterer@redhat.com>
+
+commit c94477f16356790741ebc139d2d0b15d79c83e28
+Author: Peter Hutterer <peter.hutterer@redhat.com>
+Date:   Tue Oct 14 21:54:16 2008 +1030
+
+    Revert "Fix typos in comments (UP/DOWN TACK and LEFT/RIGHT TACK wrong way round)."
+    
+    Codepoints should have moved with the comments. See next commit for correct
+    patch.
+    
+    This reverts commit 2945d2f97c264783e4050a8f6c3016290014b9e2.
+
+commit 2945d2f97c264783e4050a8f6c3016290014b9e2
+Author: Peter Hutterer <peter.hutterer@redhat.com>
+Date:   Tue Oct 14 21:04:08 2008 +1030
+
+    Fix typos in comments (UP/DOWN TACK and LEFT/RIGHT TACK wrong way round).
+    
+    Spotted by Erik Streb.
+    
+    Signed-off-by: Peter Hutterer <peter.hutterer@redhat.com>
+
+commit 610eb9698316b7cdfe378ce7776c4520f8b061ff
+Author: Peter Hutterer <peter.hutterer@redhat.com>
+Date:   Mon Oct 13 12:01:16 2008 +1030
+
+    Add keysyms for XF86XK_Battery, XF86XK_Bluetooth, XF86XK_WLAN, XF86XK_UWB.
+
+commit 0846d7adfe790897e879c5ed53d4f81db459a20d
+Author: James Cloos <cloos@jhcloos.com>
+Date:   Sun Jul 13 17:57:09 2008 -0400
+
+    Add dead_perispomeni to keysymdef.h
+    
+    Make the dead_perispomeni keysym an alias to dead_tilde
+    (which is currently used for entering characters with
+    perispomeni).
+    
+    Cf: https://bugs.freedesktop.org/show_bug.cgi?id=14013
+
+commit 38edd9839fa8495602378af36c67b2477b24eca2
+Author: James Cloos <cloos@jhcloos.com>
+Date:   Sun Jul 13 17:54:47 2008 -0400
+
+    fix typo in commit 40ed4eef
+
+commit 53859ee4e431c21000e282971894dbe9384ed205
+Author: Peter Hutterer <peter@cs.unisa.edu.au>
+Date:   Wed May 28 17:17:38 2008 +0930
+
+    Bump to 7.0.13.
+
+commit 44e458285bb2e7771963a9ab9b5f03d2fb48e611
+Author: Peter Hutterer <peter@cs.unisa.edu.au>
+Date:   Tue May 15 16:41:08 2007 +0930
+
+    Add GenericEvent and xGenericEvent definitions.
+    (cherry picked from commit 8a96cdca08db2563e8c4c7c9a110a3ab6d973fcc)
+
+commit 22878c30d21580146200c00070478f88d969bcaa
+Author: Jeremy Huddleston <jeremyhu@freedesktop.org>
+Date:   Thu May 8 15:02:41 2008 -0700
+
+    Apple: Added a comment to explain _DARWIN_C_SOURCE
+
+commit e3035a7e6e56e01eb79478ea5342e032ec67a190
+Author: Jeremy Huddleston <jeremyhu@freedesktop.org>
+Date:   Thu May 8 12:16:15 2008 -0700
+
+    Apple: Define _DARWIN_C_SOURCE otherwise _XOPEN_SOURCE, _POSIX_SOURCE, or _POSIX_C_SOURCE will cause fd_mask to not be defined due to the strict namespace
+
+commit 05b119d78e1c6a4db563b2a976cee0173489f9b6
+Author: Jeremy Huddleston <jeremyhu@freedesktop.org>
+Date:   Thu May 8 11:36:03 2008 -0700
+
+    Apple: Cleaned up some Apple definitions
+
+commit c879dab58f82f4789f27933c22706c84015f8684
+Author: Alan Hourihane <alanh@tungstengraphics.com>
+Date:   Tue Apr 29 00:37:28 2008 +0100
+
+    avoid checking for fds_bits on mingw
+
+commit 8642ec676db0dd875f4d3a97d8a3cdbf6843a985
+Author: Colin Harrison <colin.harrison-at-virgin.net>
+Date:   Sat Apr 26 18:21:41 2008 +0100
+
+    Use Sleep() instead of sleep() on windows
+    
+    (was already done in Xwindows.h, just not Xw32defs.h)
+
+commit a893a6ac5d9fdfe9a420d1812402a01904e6482b
+Author: Colin Harrison <colin.harrison-at-virgin.net>
+Date:   Sat Apr 26 08:52:29 2008 +0100
+
+    Use winsock2.h
+
+commit c705bab0f6efcb6937b7ccc2fb415e701878fddb
+Author: Markus Kuhn <Markus.Kuhn@cl.cam.ac.uk>
+Date:   Mon Apr 21 21:27:26 2008 +0100
+
+    Added comment to slightly discourage the definition of ever more Unicode keysyms
+
+commit 44e24a27bca023cf7b799f191fe6d52e12efbe5f
+Author: James Cloos <cloos@jhcloos.com>
+Date:   Sat Apr 12 15:48:46 2008 -0400
+
+    Add more dead key syms
+    Add dead keys to support input of the precomposed latin characters in
+    ISO 10747 which have ring, line, circumflex, tilde, breve or diaeresis
+    below.
+    
+    This addresses:  https://bugs.freedesktop.org/show_bug.cgi?id=15446
+
+commit 07e83988ec0b1c9577646daca3943badd5dcc0d1
+Author: James Cloos <cloos@jhcloos.com>
+Date:   Thu Mar 6 11:34:17 2008 -0500
+
+    Fix typo in XF86Keysym.h
+    
+    Fix typo reported in https://bugs.freedesktop.org/show_bug.cgi?id=11193
+    thereby making XF86Keysym.h match libX11’s XKeysymDB.
+
 commit d34310efef11264ddff79320b8c6f03705b1208a
 Author: Adam Jackson <ajax@redhat.com>
 Date:   Wed Mar 5 22:09:16 2008 -0500
