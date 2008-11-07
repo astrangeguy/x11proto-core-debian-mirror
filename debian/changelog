@@ -1,9 +1,9 @@
-x11proto-core (7.0.14-1) UNRELEASED; urgency=low
+x11proto-core (7.0.14-1) experimental; urgency=low
 
   * debian/control: x-dev is in Section: libdevel, not x11.
   * New upstream version.
 
- -- Julien Cristau <jcristau@debian.org>  Fri, 07 Mar 2008 15:12:44 +0100
+ -- Julien Cristau <jcristau@debian.org>  Fri, 07 Nov 2008 21:15:15 +0100
 
 x11proto-core (7.0.12-1) unstable; urgency=low
 
