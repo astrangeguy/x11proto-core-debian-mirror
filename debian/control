@@ -3,7 +3,10 @@ Section: x11
 Priority: optional
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
 Uploaders: David Nusinow <dnusinow@debian.org>, Julien Cristau <jcristau@debian.org>
-Build-Depends: debhelper (>= 5.0.0)
+Build-Depends:
+ debhelper (>= 5.0.0),
+ automake,
+ xutils-dev
 Standards-Version: 3.7.3
 Vcs-Git: git://git.debian.org/git/pkg-xorg/proto/x11proto-core
 Vcs-Browser: http://git.debian.org/?p=pkg-xorg/proto/x11proto-core.git

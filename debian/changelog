@@ -1,3 +1,9 @@
+x11proto-core (7.0.14-2) UNRELEASED; urgency=low
+
+  * Run autoreconf on build.  Add build-deps on automake and xutils-dev.
+
+ -- Julien Cristau <jcristau@debian.org>  Sun, 15 Feb 2009 19:37:03 +0100
+
 x11proto-core (7.0.14-1) experimental; urgency=low
 
   * debian/control: x-dev is in Section: libdevel, not x11.
