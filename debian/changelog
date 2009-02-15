@@ -1,8 +1,9 @@
-x11proto-core (7.0.14-2) UNRELEASED; urgency=low
+x11proto-core (7.0.14-2) unstable; urgency=low
 
   * Run autoreconf on build.  Add build-deps on automake and xutils-dev.
+  * Upload to unstable.
 
- -- Julien Cristau <jcristau@debian.org>  Sun, 15 Feb 2009 19:37:03 +0100
+ -- Julien Cristau <jcristau@debian.org>  Sun, 15 Feb 2009 20:47:37 +0100
 
 x11proto-core (7.0.14-1) experimental; urgency=low
 
