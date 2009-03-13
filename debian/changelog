@@ -1,3 +1,9 @@
+x11proto-core (7.0.15-1) UNRELEASED; urgency=low
+
+  * New upstream release.
+
+ -- Julien Cristau <jcristau@debian.org>  Fri, 13 Mar 2009 11:03:51 +0100
+
 x11proto-core (7.0.14-2) unstable; urgency=low
 
   * Run autoreconf on build.  Add build-deps on automake and xutils-dev.

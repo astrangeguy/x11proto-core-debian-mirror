@@ -1,3 +1,104 @@
+commit 034319189648eaaa483f9546c62451edb7be0c28
+Author: James Cloos <cloos@jhcloos.com>
+Date:   Mon Mar 2 12:54:41 2009 -0500
+
+    Bump to 7.0.15.
+
+commit 391f302a7d71b9169ce4c18794251ea3ccc95904
+Author: Paulo Cesar Pereira de Andrade <pcpa@mandriva.com.br>
+Date:   Tue Jan 27 20:06:28 2009 -0200
+
+    Janitor: Correct make distcheck and dont distribute autogen.sh
+
+commit 1e33337d4dd151da4f0898a86608a1ee67588163
+Author: Peter Hutterer <peter.hutterer@who-t.net>
+Date:   Mon Oct 27 16:36:34 2008 +1030
+
+    Add XF86XK_Suspend and XF86XK_Hibernate keysym defs.
+    
+    At the moment, we have the following keysyms defined to put a computer into a
+    sleep state:
+    
+    XF86XK_Standby    0x1008FF10   /* System into standby mode   */
+    XF86XK_PowerDown  0x1008FF21   /* Deep sleep the system      */
+    XF86XK_Sleep      0x1008FF2F   /* Put system to sleep        */
+    
+    Proposed change by Richard Hughes:
+        "The nomenclature I've been trying to make stick
+        (most projects now use this) for a few years now is:
+    
+        standby: high sleep state, nobody uses this any more
+        hibernate: sleep to disk - slow, but can remove power
+        suspend: sleep to ram - fast, but can't remove power
+        hybrid sleep: sleep to both, slow, and can remove power, but quick to
+        resume if you don't - most users don't use this"
+    
+    This patch adds XF86XK_Suspend and XF86XK_Hibernate. The behaviour of
+    XF86XK_Sleep can then be configured on a per-session basis.
+    
+    Signed-off-by: Peter Hutterer <peter.hutterer@redhat.com>
+
+commit 2563153ed69d3d6f052ba275ff79df3cbe54b76d
+Author: James Cloos <cloos@jhcloos.com>
+Date:   Tue Nov 11 16:26:28 2008 -0500
+
+    [keysymdef.h] Add dead_currency symbol.
+    
+    As requested for the Bépo keyboard layout (http://clavier-dvorak.org/wiki/).
+    
+    Cf. bugs:
+    
+      http://bugs.freedesktop.org/show_bug.cgi?id=17821
+      http://bugs.freedesktop.org/show_bug.cgi?id=17822
+
+commit 735d745e17a6180f569f24f9792513b44e100aef
+Author: James Cloos <cloos@jhcloos.com>
+Date:   Mon Oct 13 03:11:33 2008 -0400
+
+    Add a dead_belowcomma keysym
+    
+    Requested by the Bépo group.
+    
+    The belowcomma is only used for:
+    
+     U+0218 [Ș] LATIN CAPITAL LETTER S WITH COMMA BELOW
+     U+0219 [ș] LATIN SMALL LETTER S WITH COMMA BELOW
+     U+021A [Ț] LATIN CAPITAL LETTER T WITH COMMA BELOW
+     U+021B [ț] LATIN SMALL LETTER T WITH COMMA BELOW
+    
+    (aka 0xAA, 0xBA, 0xDE and 0xFE from iso-8859-16).
+    
+    Cf: http://bugs.freedesktop.org/show_bug.cgi?id=17822
+        http://bugs.freedesktop.org/show_bug.cgi?id=17821
+        http://clavier-dvorak.org/wiki/
+
+commit 935dd37be409bd616ef46a4d3b62c44327b3f710
+Author: Sayamindu Dasgupta <sayamindu@gmail.com>
+Date:   Mon Oct 13 03:00:53 2008 -0400
+
+    Add dead vowels in keysymdef.h
+    
+    At OLPC, we are using an XKB based Amharic keyboard layout, which requires the
+    use of dead vowels to generate the various consonant + vowel combinations (see
+    http://en.wikipedia.org/wiki/Ge%27ez_alphabet#Syllable_signs for a detailed
+    explanation).
+    
+    [Patch modified to use available keysym codes.  -JimC]
+    
+    Cf: http://bugs.freedesktop.org/show_bug.cgi?id=17437
+    
+    Signed-off-by: James Cloos <cloos@jhcloos.com>
+
+commit c43f804f44ba3d751f343c2e27d9b491a1ebb458
+Author: James Cloos <cloos@jhcloos.com>
+Date:   Wed Sep 17 04:09:39 2008 -0400
+
+    Add dead keysyms for DOUBLE GRAVE and INVERTED BREVE accents
+    
+    Several COMBINING characters are used in libX11's Compose tables
+    where dead keys should be used; these are the two most-used which
+    so far have not had equivalent dead keys.
+
 commit 33a7de5cdacb59503b26c6523ffb33dba118faed
 Author: Peter Hutterer <peter.hutterer@redhat.com>
 Date:   Thu Oct 23 22:41:01 2008 +1030
