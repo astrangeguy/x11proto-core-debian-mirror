@@ -1,8 +1,8 @@
-x11proto-core (7.0.15-1) UNRELEASED; urgency=low
+x11proto-core (7.0.15-1) unstable; urgency=low
 
   * New upstream release.
 
- -- Julien Cristau <jcristau@debian.org>  Fri, 13 Mar 2009 11:03:51 +0100
+ -- Julien Cristau <jcristau@debian.org>  Fri, 13 Mar 2009 11:06:28 +0100
 
 x11proto-core (7.0.14-2) unstable; urgency=low
 
