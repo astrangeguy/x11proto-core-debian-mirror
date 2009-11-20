@@ -1,7 +1,11 @@
-x11proto-core (7.0.15-2) UNRELEASED; urgency=low
+x11proto-core (7.0.16-1) UNRELEASED; urgency=low
 
+  [ Julien Cristau ]
   * Make build-dep on xutils-dev versioned (closes: #521230).  Lenny's version
     is too old.  Thanks, Alexander Wuerstlein!
+
+  [ Timo Aaltonen ]
+  * New upstream release 7.0.16.
 
  -- Julien Cristau <jcristau@debian.org>  Wed, 10 Jun 2009 22:53:41 +0200
 
