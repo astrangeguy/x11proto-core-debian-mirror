@@ -6,6 +6,8 @@ x11proto-core (7.0.16-1) UNRELEASED; urgency=low
 
   [ Timo Aaltonen ]
   * New upstream release 7.0.16.
+  * Drop Conflicts/Replaces on x-dev and Pre-Depends on x11-common.  This
+    was needed for upgrades from sarge.
 
  -- Julien Cristau <jcristau@debian.org>  Wed, 10 Jun 2009 22:53:41 +0200
 
