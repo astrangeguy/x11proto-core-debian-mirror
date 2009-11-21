@@ -19,21 +19,9 @@ Description: X11 core wire protocol and auxiliary headers
  for the core X11 protocol, and also provides a number of utility headers,
  used to abstract OS-specific functions.
  .
- This package deprecates 'x-dev', a package from the monolithic builds of
- XFree86 and X.Org.
- .
  More information about X.Org can be found at:
  <URL:http://www.X.org>
  <URL:http://xorg.freedesktop.org>
  <URL:http://lists.freedesktop.org/mailman/listinfo/xorg>
  .
  This package is built from the X.org xproto proto module.
-
-Package: x-dev
-Section: libdevel
-Architecture: all
-Depends: x11proto-core-dev
-Description: dummy package for transition purposes
- This package is a dummy package for transition purposes, and only exists to
- depend on x11proto-core-dev.  You may safely remove it if it will not
- remove other packages.

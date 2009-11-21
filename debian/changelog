@@ -1,3 +1,9 @@
+x11proto-core (7.0.16-2) UNRELEASED; urgency=low
+
+  * Get rid of the x-dev transitional package.
+
+ -- Julien Cristau <jcristau@debian.org>  Sat, 21 Nov 2009 10:34:47 +0100
+
 x11proto-core (7.0.16-1) unstable; urgency=low
 
   [ Julien Cristau ]
