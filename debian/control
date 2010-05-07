@@ -21,7 +21,5 @@ Description: X11 core wire protocol and auxiliary headers
  .
  More information about X.Org can be found at:
  <URL:http://www.X.org>
- <URL:http://xorg.freedesktop.org>
- <URL:http://lists.freedesktop.org/mailman/listinfo/xorg>
  .
  This package is built from the X.org xproto proto module.
