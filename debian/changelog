@@ -6,6 +6,7 @@ x11proto-core (7.0.17-1) UNRELEASED; urgency=low
   * Remove myself from Uploaders
   * New upstream release.
   * Bump xutils-dev build-dep for xorg-macros.
+  * Update debian/copyright.
 
  -- Julien Cristau <jcristau@debian.org>  Sat, 03 Jul 2010 20:04:15 +0100
 
