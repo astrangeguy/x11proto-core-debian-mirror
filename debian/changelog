@@ -1,4 +1,4 @@
-x11proto-core (7.0.17-1) UNRELEASED; urgency=low
+x11proto-core (7.0.17-1) experimental; urgency=low
 
   * Get rid of the x-dev transitional package.
   * Rename the build directory to not include DEB_BUILD_GNU_TYPE for no
@@ -9,7 +9,7 @@ x11proto-core (7.0.17-1) UNRELEASED; urgency=low
   * Update debian/copyright.
   * Bump Standards-Version to 3.9.0, no changes.
 
- -- Julien Cristau <jcristau@debian.org>  Sat, 03 Jul 2010 20:04:15 +0100
+ -- Julien Cristau <jcristau@debian.org>  Wed, 07 Jul 2010 18:21:51 +0100
 
 x11proto-core (7.0.16-1) unstable; urgency=low
 
