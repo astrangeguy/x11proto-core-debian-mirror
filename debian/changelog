@@ -13,6 +13,7 @@ x11proto-core (7.0.18-1) UNRELEASED; urgency=low
   * Update debian/copyright from upstream COPYING.
   * Switch from --list-missing to --fail-missing for additional safety.
   * No longer pass --disable-shared, this option is gone.
+  * Add myself to Uploaders.
 
  -- Robert Hooker <sarvatt@ubuntu.com>  Tue, 02 Nov 2010 19:14:34 -0400
 
