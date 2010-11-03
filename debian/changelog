@@ -9,6 +9,9 @@ x11proto-core (7.0.18) UNRELEASED; urgency=low
   [ Robert Hooker ]
   * New upstream release.
 
+  [ Cyril Brulebois ]
+  * Update debian/copyright from upstream COPYING.
+
  -- Robert Hooker <sarvatt@ubuntu.com>  Tue, 02 Nov 2010 19:14:34 -0400
 
 x11proto-core (7.0.16-1) unstable; urgency=low
