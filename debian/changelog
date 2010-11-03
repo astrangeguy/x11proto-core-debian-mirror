@@ -1,4 +1,4 @@
-x11proto-core (7.0.18) UNRELEASED; urgency=low
+x11proto-core (7.0.18-1) UNRELEASED; urgency=low
 
   [ Julien Cristau ]
   * Get rid of the x-dev transitional package.
