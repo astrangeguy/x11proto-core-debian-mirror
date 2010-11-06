@@ -1,3 +1,9 @@
+x11proto-core (7.0.22-2) UNRELEASED; urgency=low
+
+  * Build pdf docs.
+
+ -- Julien Cristau <jcristau@debian.org>  Sat, 14 Apr 2012 18:57:42 +0200
+
 x11proto-core (7.0.22-1) unstable; urgency=low
 
   * New upstream release.
