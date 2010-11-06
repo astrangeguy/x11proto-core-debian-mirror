@@ -1,6 +1,7 @@
 x11proto-core (7.0.19-1) UNRELEASED; urgency=low
 
   * New upstream release.
+  * Bump xutils-dev build-dep for new macros.
 
  -- Cyril Brulebois <kibi@debian.org>  Sat, 06 Nov 2010 02:27:28 +0100
 
