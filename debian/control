@@ -8,6 +8,8 @@ Build-Depends:
  automake,
  xutils-dev (>= 1:7.5+4),
  pkg-config,
+# specs:
+ xmlto, xorg-sgml-doctools (>= 1:1.5), w3m,
 Standards-Version: 3.8.3
 Vcs-Git: git://git.debian.org/git/pkg-xorg/proto/x11proto-core
 Vcs-Browser: http://git.debian.org/?p=pkg-xorg/proto/x11proto-core.git
