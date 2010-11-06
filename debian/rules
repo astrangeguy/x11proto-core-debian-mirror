@@ -42,6 +42,7 @@ build-stamp: configure
 	cd build && \
 	../configure --prefix=/usr --mandir=\$${prefix}/share/man \
 	             --infodir=\$${prefix}/share/info \
+	             --with-xmlto --without-fop \
 	             $(confflags) CFLAGS="$(CFLAGS)" 
 	cd build && $(MAKE)
 	>$@
