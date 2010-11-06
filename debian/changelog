@@ -12,12 +12,6 @@ x11proto-core (7.0.19-1) unstable; urgency=low
 
 x11proto-core (7.0.18-1) unstable; urgency=low
 
-  [ Julien Cristau ]
-  * Get rid of the x-dev transitional package.
-  * Rename the build directory to not include DEB_BUILD_GNU_TYPE for no
-    good reason.  Thanks, Colin Watson!
-  * Remove myself from Uploaders
-
   [ Robert Hooker ]
   * New upstream release.
 
@@ -28,6 +22,19 @@ x11proto-core (7.0.18-1) unstable; urgency=low
   * Add myself to Uploaders.
 
  -- Cyril Brulebois <kibi@debian.org>  Wed, 03 Nov 2010 01:17:11 +0100
+
+x11proto-core (7.0.17-1) experimental; urgency=low
+
+  * Get rid of the x-dev transitional package.
+  * Rename the build directory to not include DEB_BUILD_GNU_TYPE for no
+    good reason.  Thanks, Colin Watson!
+  * Remove myself from Uploaders
+  * New upstream release.
+  * Bump xutils-dev build-dep for xorg-macros.
+  * Update debian/copyright.
+  * Bump Standards-Version to 3.9.0, no changes.
+
+ -- Julien Cristau <jcristau@debian.org>  Wed, 07 Jul 2010 18:21:51 +0100
 
 x11proto-core (7.0.16-1) unstable; urgency=low
 
