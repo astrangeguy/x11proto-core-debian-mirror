@@ -6,6 +6,7 @@ x11proto-core (7.0.19-1) UNRELEASED; urgency=low
   * Add xmlto, xorg-sgml-doctools, and w3m build-dep for the specs.
   * Pass --with-xmlto and --without-fop, we want html and txt only.
   * Ship *.html, *.css, and *.txt from the doc directory.
+  * Kill *.xml in the doc directory, no point in shipping them.
 
  -- Cyril Brulebois <kibi@debian.org>  Sat, 06 Nov 2010 02:27:28 +0100
 
