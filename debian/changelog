@@ -1,4 +1,4 @@
-x11proto-core (7.0.19-1) UNRELEASED; urgency=low
+x11proto-core (7.0.19-1) unstable; urgency=low
 
   * New upstream release.
   * Bump xutils-dev build-dep for new macros.
@@ -8,7 +8,7 @@ x11proto-core (7.0.19-1) UNRELEASED; urgency=low
   * Ship *.html, *.css, and *.txt from the doc directory.
   * Kill *.xml in the doc directory, no point in shipping them.
 
- -- Cyril Brulebois <kibi@debian.org>  Sat, 06 Nov 2010 02:27:28 +0100
+ -- Cyril Brulebois <kibi@debian.org>  Sat, 06 Nov 2010 02:33:18 +0100
 
 x11proto-core (7.0.18-1) unstable; urgency=low
 
