@@ -8,6 +8,9 @@ x11proto-core (7.0.20-1) UNRELEASED; urgency=low
     - 5d3428d... Add XF86XK_TouchpadOn/Off
     - Various spec updates.
 
+  [ Cyril Brulebois ]
+  * Update debian/copyright from upstream's COPYING.
+
  -- Robert Hooker <sarvatt@ubuntu.com>  Fri, 07 Jan 2011 11:14:03 -0500
 
 x11proto-core (7.0.19-1) unstable; urgency=low
