@@ -8,6 +8,7 @@ Build-Depends:
  automake,
  xutils-dev (>= 1:7.5+4),
  pkg-config,
+ quilt,
 # specs:
  xmlto, xorg-sgml-doctools (>= 1:1.5), w3m,
 Standards-Version: 3.9.0

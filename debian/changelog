@@ -11,6 +11,7 @@ x11proto-core (7.0.20-1) UNRELEASED; urgency=low
   [ Cyril Brulebois ]
   * Update debian/copyright from upstream's COPYING.
   * Add 01_keep_xorg_css.diff temporarily.
+  * Add patching in debian/rules, and quilt build-dep accordingly.
 
  -- Robert Hooker <sarvatt@ubuntu.com>  Fri, 07 Jan 2011 11:14:03 -0500
 

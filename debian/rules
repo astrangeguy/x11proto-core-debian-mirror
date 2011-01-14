@@ -31,7 +31,7 @@ else
 	confflags += --build=$(DEB_BUILD_GNU_TYPE) --host=$(DEB_HOST_GNU_TYPE)
 endif
 
-configure:
+configure: $(STAMP_DIR)/patch
 	dh_testdir
 	autoreconf -vfi
 
@@ -47,7 +47,7 @@ build-stamp: configure
 	cd build && $(MAKE)
 	>$@
 
-clean:
+clean: xsfclean
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp
