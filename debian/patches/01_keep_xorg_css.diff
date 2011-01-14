@@ -1,0 +1,37 @@
+From 936fecff1bc872504aea7f948ea5855b23461cfe Mon Sep 17 00:00:00 2001
+From: Cyril Brulebois <kibi@debian.org>
+Date: Fri, 14 Jan 2011 04:02:50 +0100
+Subject: [PATCH] Revert "config: HTML file generation: use the installed copy of xorg.css"
+
+Let's just keep a local copy of xorg.css on the short term. There's
+going to be a plan for the long run.
+
+This partially reverts commit d441b9b0230b57159fa8522b80f18a0b87f5aac5
+(there's no specs/.gitignore in the released tarball).
+---
+ specs/Makefile.am |    9 +++++----
+ 1 files changed, 5 insertions(+), 4 deletions(-)
+
+diff --git a/specs/Makefile.am b/specs/Makefile.am
+index c0b1642..0a09d3a 100644
+--- a/specs/Makefile.am
++++ b/specs/Makefile.am
+@@ -44,10 +44,11 @@ doc_DATA += $(doc_sources:.xml=.txt)
+ endif
+ 
+ if HAVE_STYLESHEETS
+-XMLTO_FLAGS =						\
+-	-m $(XSL_STYLESHEET)				\
+-	--stringparam img.src.path=$(abs_builddir)/ 	\
+-	--stringparam html.stylesheet=$(STYLESHEET_SRCDIR)/xorg.css
++XMLTO_FLAGS = -m $(XSL_STYLESHEET) --stringparam img.src.path=$(abs_builddir)/
++
++doc_DATA += xorg.css
++xorg.css: $(STYLESHEET_SRCDIR)/xorg.css
++	$(AM_V_GEN)cp -pf $(STYLESHEET_SRCDIR)/xorg.css $@
+ endif
+ 
+ CLEANFILES = $(doc_DATA)
+-- 
+1.7.2.3
+
