@@ -1,10 +1,10 @@
-x11proto-core (7.0.21-1) UNRELEASED; urgency=low
+x11proto-core (7.0.21-1) experimental; urgency=low
 
   * New upstream release:
     - Brings Sinhala support, needed for the lk XKB keyboard layout.
   * Update debian/copyright from upstream COPYING.
 
- -- Cyril Brulebois <kibi@debian.org>  Sat, 26 Mar 2011 00:02:24 +0100
+ -- Cyril Brulebois <kibi@debian.org>  Sat, 26 Mar 2011 00:07:04 +0100
 
 x11proto-core (7.0.20-1) unstable; urgency=low
 
