@@ -2,6 +2,7 @@ x11proto-core (7.0.21-3) UNRELEASED; urgency=low
 
   * Mark x11proto-core-dev Multi-Arch: foreign, so that this arch: all
     package satisfies the dependencies of foreign-arch packages.
+  * Install .pc file to /usr/share/pkgconfig instead of /usr/lib/pkgconfig.
 
  -- Steve Langasek <vorlon@debian.org>  Thu, 16 Jun 2011 20:57:58 -0700
 
