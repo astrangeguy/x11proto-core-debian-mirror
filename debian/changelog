@@ -1,3 +1,10 @@
+x11proto-core (7.0.21-3) UNRELEASED; urgency=low
+
+  * Mark x11proto-core-dev Multi-Arch: foreign, so that this arch: all
+    package satisfies the dependencies of foreign-arch packages.
+
+ -- Steve Langasek <vorlon@debian.org>  Thu, 16 Jun 2011 20:57:58 -0700
+
 x11proto-core (7.0.21-2) unstable; urgency=low
 
   * Upload to unstable.
