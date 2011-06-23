@@ -6,11 +6,11 @@ Uploaders: David Nusinow <dnusinow@debian.org>, Cyril Brulebois <kibi@debian.org
 Build-Depends:
  debhelper (>= 5.0.0),
  automake,
- xutils-dev (>= 1:7.5+4),
+ xutils-dev (>= 1:7.6+2),
  pkg-config,
  quilt,
 # specs:
- xmlto, xorg-sgml-doctools (>= 1:1.5), w3m,
+ xmlto, xorg-sgml-doctools (>= 1:1.8), w3m,
 Standards-Version: 3.9.0
 Vcs-Git: git://git.debian.org/git/pkg-xorg/proto/x11proto-core
 Vcs-Browser: http://git.debian.org/?p=pkg-xorg/proto/x11proto-core.git
