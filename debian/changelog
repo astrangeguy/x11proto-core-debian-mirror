@@ -13,6 +13,7 @@ x11proto-core (7.0.22-1) UNRELEASED; urgency=low
     - Bump debhelper build-dep and compat.
     - Use dh-autoreconf and quilt sequences.
     - Rewrite debian/rules.
+  * Get rid of xsfbs accordingly.
 
  -- Cyril Brulebois <kibi@debian.org>  Thu, 23 Jun 2011 10:25:37 +0200
 
