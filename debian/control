@@ -17,7 +17,7 @@ Vcs-Browser: http://git.debian.org/?p=pkg-xorg/proto/x11proto-core.git
 
 Package: x11proto-core-dev
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, xorg-sgml-doctools (>= 1:1.5),
 Multi-Arch: foreign
 Description: X11 core wire protocol and auxiliary headers
  This package provides development headers describing the wire protocol
