@@ -4,6 +4,7 @@ x11proto-core (7.0.22-1) UNRELEASED; urgency=low
   * Bump xutils-dev and xorg-sgml-doctools build-deps.
   * Add xsltproc build-dep.
   * Get rid of the temporary 01_keep_xorg_css.diff patch.
+  * Drop the css from .install accordingly.
 
  -- Cyril Brulebois <kibi@debian.org>  Thu, 23 Jun 2011 10:25:37 +0200
 

@@ -1,5 +1,4 @@
 usr/include/X11/*
 usr/lib/pkgconfig/xproto.pc /usr/share/pkgconfig
 usr/share/doc/xproto/*.html usr/share/doc/x11proto-core-dev/
-usr/share/doc/xproto/*.css  usr/share/doc/x11proto-core-dev/
 usr/share/doc/xproto/*.txt  usr/share/doc/x11proto-core-dev/
