@@ -7,6 +7,7 @@ x11proto-core (7.0.22-1) UNRELEASED; urgency=low
   * Drop the css from .install accordingly.
   * Use xorg-sgml-doctool's copy of xorg.css.
   * Wrap (Build-)Depends.
+  * Don't install *.db yet, keep that for later.
 
  -- Cyril Brulebois <kibi@debian.org>  Thu, 23 Jun 2011 10:25:37 +0200
 

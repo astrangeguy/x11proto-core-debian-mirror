@@ -79,6 +79,7 @@ binary-indep: build install
 	dh_installdocs
 	dh_installman
 	find debian/tmp/usr/share/doc/xproto -name '*.xml' -delete
+	find debian/tmp/usr/share/sgml/X11/dbs -name '*.db' -delete
 	dh_install --sourcedir=debian/tmp --fail-missing
 	dh_installchangelogs ChangeLog
 	dh_link
