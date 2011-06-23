@@ -9,6 +9,10 @@ x11proto-core (7.0.22-1) UNRELEASED; urgency=low
   * Wrap (Build-)Depends.
   * Don't install *.db yet, keep that for later.
   * Update Uploaders list. Thanks, David!
+  * Switch to dh:
+    - Bump debhelper build-dep and compat.
+    - Use dh-autoreconf and quilt sequences.
+    - Rewrite debian/rules.
 
  -- Cyril Brulebois <kibi@debian.org>  Thu, 23 Jun 2011 10:25:37 +0200
 

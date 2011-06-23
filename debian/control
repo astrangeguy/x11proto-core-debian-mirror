@@ -4,11 +4,11 @@ Priority: optional
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
 Uploaders: Cyril Brulebois <kibi@debian.org>
 Build-Depends:
- debhelper (>= 5.0.0),
- automake,
+ debhelper (>= 8),
+ dh-autoreconf,
+ quilt,
  xutils-dev (>= 1:7.6+2),
  pkg-config,
- quilt,
 # specs:
  xmlto,
  xorg-sgml-doctools (>= 1:1.8),
