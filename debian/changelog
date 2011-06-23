@@ -14,6 +14,7 @@ x11proto-core (7.0.22-1) UNRELEASED; urgency=low
     - Use dh-autoreconf and quilt sequences.
     - Rewrite debian/rules.
   * Get rid of xsfbs accordingly.
+  * Bump Standards-Version to 3.9.2 (no changes).
 
  -- Cyril Brulebois <kibi@debian.org>  Thu, 23 Jun 2011 10:25:37 +0200
 
