@@ -1,3 +1,9 @@
+x11proto-core (7.0.22-1) UNRELEASED; urgency=low
+
+  * New upstream release.
+
+ -- Cyril Brulebois <kibi@debian.org>  Thu, 23 Jun 2011 10:25:37 +0200
+
 x11proto-core (7.0.21-3) unstable; urgency=low
 
   * Mark x11proto-core-dev Multi-Arch: foreign, so that this arch: all
