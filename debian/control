@@ -10,7 +10,7 @@ Build-Depends:
  pkg-config,
  quilt,
 # specs:
- xmlto, xorg-sgml-doctools (>= 1:1.8), w3m,
+ xmlto, xorg-sgml-doctools (>= 1:1.8), w3m, xsltproc,
 Standards-Version: 3.9.0
 Vcs-Git: git://git.debian.org/git/pkg-xorg/proto/x11proto-core
 Vcs-Browser: http://git.debian.org/?p=pkg-xorg/proto/x11proto-core.git
