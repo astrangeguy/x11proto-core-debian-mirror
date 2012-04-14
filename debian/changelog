@@ -1,10 +1,10 @@
-x11proto-core (7.0.23-1) UNRELEASED; urgency=low
+x11proto-core (7.0.23-1) unstable; urgency=low
 
   * New upstream release.
   * Build pdf docs.
   * Set docdir in configure.
 
- -- Julien Cristau <jcristau@debian.org>  Sat, 14 Apr 2012 19:05:32 +0200
+ -- Julien Cristau <jcristau@debian.org>  Sat, 14 Apr 2012 19:14:24 +0200
 
 x11proto-core (7.0.22-1) unstable; urgency=low
 
