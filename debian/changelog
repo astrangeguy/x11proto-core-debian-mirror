@@ -1,10 +1,10 @@
-x11proto-core (7.0.27-1) UNRELEASED; urgency=medium
+x11proto-core (7.0.27-1) unstable; urgency=medium
 
   * Let uscan verify tarball signatures.
   * New upstream release.
   * Remove Cyril from Uploaders.
 
- -- Julien Cristau <jcristau@debian.org>  Sun, 26 Apr 2015 15:35:21 +0200
+ -- Julien Cristau <jcristau@debian.org>  Sun, 26 Apr 2015 15:45:15 +0200
 
 x11proto-core (7.0.26-1) unstable; urgency=medium
 
